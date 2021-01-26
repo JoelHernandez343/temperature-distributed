@@ -1,2 +1,3 @@
 time-server
-.o
+*.o
+**/client
