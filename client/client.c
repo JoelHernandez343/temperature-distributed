@@ -33,9 +33,9 @@ void receive_data(int client_socket){
         received += read(client_socket, &clock + received, length - received);
     }
 
-    printf("Seconds: %x\n", clock.seconds);
-    printf("Minutes: %x\n", clock.minute);
-    printf("Hours: %x\n", clock.hour);
+    printf("Seconds: %d\n", clock.seconds % 60);
+    printf("Minutes: %d\n", clock.minute);
+    printf("Hours: %d\n", clock.hour);
     printf("Temp: %f\n", clock.temp);
 
     printf(LOG"Data received, closing connection.\n");
